@@ -1,0 +1,35 @@
+img{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 400px;
+  padding: 5px;
+  width: 250px;
+  size: 20px;
+}
+hr{
+  border-style: none;
+  border-top-style: dotted;
+  width:8%;
+  border-color: teal;
+  border-width: 20px;
+}
+h1{
+  color: teal;
+}
+h2{
+  color: teal;
+}
+h3{
+  color: teal;
+}
+ul{
+  color: teal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+}
+td{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+}
