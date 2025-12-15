@@ -169,6 +169,10 @@ body {
   margin: auto;
 }
 
+.experience-list{
+   list-style: none;
+}
+
 .experience h2 {
   font-size: 2rem;
   margin-bottom: 40px;
