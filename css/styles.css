@@ -488,13 +488,26 @@ body.dark .skills li {
    MOBILE RESPONSIVE
 --------------------- */
 @media (max-width: 768px) {
-  #recommendation header {
-    gap: 20px;
+  #nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  #recommendation header > h2,
-  #recommendation header > h3 {
-    width: 100%;
-    max-width: 320px;
+  #nav li {
+    flex: 1 1 auto;
   }
 }
+
+/* --------------------
+   MOBILE BASE FIX
+--------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
