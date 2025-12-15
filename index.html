@@ -1,121 +1,214 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:" content="">
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vignesh R — Staff Quality Assurance</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="icons/favicon.svg">
-  <title>Vignesh's Profile</title>
 </head>
+<nav id="nav">
+  <ul>
+  <li><a href="#introduction">Home</a></li>
+  <li><a href="#portfolio">Portfolio</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#education">Education</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <section id="introduction" class="hero">
+    <header>
+      <h1>
+        <b>Hi I'm Vignesh</b>
+        <br>
+        <em>Staff Software Quality Engineer</em>
+        <br>
+      </h1>
+    </header>
+    <footer>
+      <a href="#portfolio" class="btn scrolly"><button class="btn">My Portfolio</button></a>
+    </footer>
+    <footer>
+      <a href="https://www.linkedin.com/in/vignesh-ramalingam32/" class="social"><img src="logos/linkedin.svg"></a>
+      <a href="https://github.com/VigneshR32" class="social"><img src="logos/github.svg"></a>
+    </footer>
+    <footer>
+      <a class="btn-secondary" href="resume/Profile.pdf" download="Vignesh_R_Resume.pdf" target="_self">Download Resume</a>
+    </footer>
+  </section>
+  <section id="portfolio" class="portfolio">
+    <header>
+      <h1>
+        <b>My Portfolio</b>
+      </h1>
+      <ul>
+        <li><a href="#about" class="btn scrolly"><button class="btn">About</button></a></li>
+        <li><a href="#experience" class="btn scrolly"><button class="btn">Experience</button></a></li>
+        <li><a href="#education" class="btn scrolly"><button class="btn">Education</button></a></li>
+        <li><a href="#skills" class="btn scrolly"><button class="btn">Skills</button></a></li>
+        <li><a href="#contact" class="btn scrolly"><button class="btn">Contact</button></a></li>
+      </ul>
+    </header>
+  </section>
+  <section id="about" class="about">
+    <h2>Quality Assurance Engineer</h2>
 
-<body class="portfolio">
-  <div class="home" id="home">
-  <img id="profiephoto" src="images/Vignesh1.jpg" alt="Profile Picture">
-  <h1 align="center">Vignesh</h1>
-  <p class="skills" align="center">
-    <em><strong>SDET</strong></em>
-  </p>
-  </div>
-  <hr class="break">
-  <div class="topnav">
-  <a class="home" href="#home">Home</a>
-  <a class="profile" href="#profile">Profile</a>
-  <a class="skills" href="#skills">Skills</a>
-  </div>
-  <div class="profile" id="profile">
-    <p>
-    <h2><u>Profile</u></h2>
-    <ul>
-      <li>
-        8 years of experience in IT Software Development and Tesing life cycle
+    <div class="tree">
+      <div class="node">
+        <h3>Automation</h3>
+        <div class="icons">
+          <img src="logos/selenium.svg">
+          <img src="logos/TestNG.svg">
+          <img src="logos/cucumber.svg">
+          <img src="logos/springboot.svg">
+        </div>
+      </div>
+
+      <div class="node">
+        <h3>API Testing</h3>
+        <div class="icons">
+          <img src="logos/ReadyAPI.svg">
+          <img src="logos/postman.svg">
+        </div>
+      </div>
+
+      <div class="node">
+        <h3>DB Testing</h3>
+        <div class="icons">
+          <img src="logos/mysql.svg">
+          <img src="logos/postgresql.svg">
+        </div>
+      </div>
+
+      <div class="node">
+        <h3>Service Virtualisation</h3>
+        <div class="icons">
+          <img src="logos/devtest.svg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+
+    <ul class="experience-list">
+
+      <li class="experience-item">
+        <h3>Staff Quality Assurance Engineer</h3>
+        <span class="company">Ping Identity</span>
+        <span class="duration">Sep 2023 – Present</span>
+        <p>
+          Leading functional and automation testing across multiple agile teams,
+          driving automation strategy, CI/CD quality integration, and continuous
+          improvement of test processes.
+        </p>
       </li>
-      <li>
-        Experience in enterprise level projects, supporting in System, System Integration and User Acceptance testing
+
+      <li class="experience-item">
+        <h3>Automation Consultant</h3>
+        <span class="company">Eviden (Atos)</span>
+        <span class="duration">Mar 2022 – Aug 2023</span>
+        <p>
+          Designed and implemented scalable test automation solutions, led scrum
+          teams, and improved test coverage and delivery efficiency.
+        </p>
       </li>
-      <li>
-        Prolific in various automation tools like
-        <ul>
-          <li>
-            Selenium
-          </li>
-          <li>
-            Rest Assured,etc..
-          </li>
-        </ul>
+
+      <li class="experience-item">
+        <h3>Senior Consultant – Automation</h3>
+        <span class="company">Capgemini</span>
+        <span class="duration">Oct 2019 – Feb 2022</span>
+        <p>
+          Architected UI and API automation frameworks using Selenium, TestNG,
+          Cucumber, and Rest Assured for enterprise clients.
+        </p>
       </li>
-      <li>
-        Deep knowledge in diversed automation frameworks like
-        <ul>
-          <li>
-            TestNG
-          </li>
-          <li>
-            Cucumber
-          </li>
-          <li>
-            BDD
-          </li>
-          <li>
-            Behave
-          </li>
-          <li>
-            Springboot
-          </li>
-        </ul>
+
+      <li class="experience-item">
+        <h3>Senior Automation Developer</h3>
+        <span class="company">Standard Chartered Bank</span>
+        <span class="duration">Oct 2016 – Oct 2019</span>
+        <p>
+          Implemented automation frameworks and service virtualization for
+          shift-left testing in agile delivery environments.
+        </p>
       </li>
-      <li>
-        Strong in Object Oriented Concepts and Aspect Oriented Programming
+
+      <li class="experience-item">
+        <h3>Test Analyst</h3>
+        <span class="company">Cognizant</span>
+        <span class="duration">Jan 2014 – Sep 2016</span>
+        <p>
+          Executed functional testing, test planning, and automation for
+          enterprise-scale applications.
+        </p>
       </li>
-      <li>
-        Implemented Shift Left Testing using Service Virtualisation
-      </li>
-      <li>
-        CI/CD pipeline creation and maintenance
-      </li>
-      <li>
-        Automation framework designing and maintaining for multiple projects
-      </li>
-      <li>
-        Able to deliver Automation framework as Docker image
-      </li>
-      <li>
-        Possess good knowledge in
-        <ul>
-          <li>Retail Banking KYC and AML modules</li>
-          <li>Insurance</li>
-          <li>OSS/BSS Modules of telecommunication</li>
-        </ul>
-      </li>
+
     </ul>
-    </p>
-  </div>
-  <hr class="break">
-  <div class="skills" id="skills">
-  <h2><u>Skills</u></h2>
-  <table class="skills" cellspacing="10">
-    <tbody>
-      <tr>
-        <td>Java</td>
-        <td>&#x2605;&#x2605;&#x2605;&#x2605;&#9734;</td>
-      </tr>
-      <tr>
-        <td>Selenium</td>
-        <td>&#x2605;&#x2605;&#x2605;&#x2605;&#9734;</td>
-      </tr>
-      <tr>
-        <td>Git</td>
-        <td>&#x2605;&#x2605;&#x2605;&#x2605;&#9734;</td>
-      </tr>
-      <tr>
-        <td>Jenkins</td>
-        <td>&#x2605;&#x2605;&#x2605;&#x2605;&#9734;</td>
-      </tr>
-    </tbody>
+  </section>
+  <section id="education" class="education">
+    <div class="education-card">
+      <h2>Education</h2>
+      <p class="degree">B.Tech – Electronics & Communication Engineering</p>
+      <p class="duration">2009 – 2013</p>
+      <p class="university">Kalasalingam University</p>
+    </div>
+  </section>
 
-  </table>
-  </div>
-</body>
+  <section id="skills" class="skills">
+    <ul>
+      <li>Java</li>
+      <li>Python</li>
+      <li>Selenium</li>
+      <li>Groovy</li>
+      <li>MySql</li>
+      <li>Postgress</li>
+      <li>ReadyAPI</li>
+      <li>SoapUi</li>
+      <li>Postman</li>
+      <li>TestNG</li>
+      <li>Jenkins</li>
+      <li>Html</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React.js</li>
+      <li>CA DevTest</li>
+      <li>SpringBoot</li>
+      <li>Automation Framework Design</li>
+      <li>Docker</li>
+    </ul>
+  </section>
+  <section id="contact" class="contact">
+    <header>
+    <form id="form" action="https://formspree.io/f/mwpgznlp" method="POST">
+      <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="user_name"/>
+      </p>
+      <p>
+        <label for="mail">E-Mail</label>
+        <input type="text" id="mail" name="user_mail"/>
+      </p>
+      <p>
+        <label for="mobile">Mobile</label>
+        <input type="text" id="mobile" name="user_mobile"/>
+      </p>
+      <p>
+        <label for="msg">Message</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </p>
+      <p class="button">
+        <button type="submit">Send your message</button>
+      </p>
+    </form>
+    </header>
+    <footer>
+      <a class="btn-secondary" href="resume/Profile.pdf" download="Vignesh_R_Resume.pdf" target="_self">Download Resume</a>
+    </footer>
+  </section>
+
+</main>
 
 </html>
