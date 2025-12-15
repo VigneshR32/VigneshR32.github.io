@@ -453,3 +453,48 @@ body.dark .skills li {
    text-align: center;
    padding: 40px 20px;
 }
+/* Recommendation card base */
+#recommendation header > h2,
+#recommendation header > h3 {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  padding: 20px 18px;
+  width: 260px;
+
+  display: flex;
+  flex-basis: auto;
+  flex-flow: wrap;
+  align-items: center;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+
+  /* Hover prep */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+/* 🔥 Hover zoom + focus */
+#recommendation header > h2:hover,
+#recommendation header > h3:hover {
+  transform: scale(1.08);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  z-index: 5;
+}
+
+
+/* --------------------
+   MOBILE RESPONSIVE
+--------------------- */
+@media (max-width: 768px) {
+  #recommendation header {
+    gap: 20px;
+  }
+
+  #recommendation header > h2,
+  #recommendation header > h3 {
+    width: 100%;
+    max-width: 320px;
+  }
+}
