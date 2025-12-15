@@ -429,7 +429,7 @@ body.dark .skills li {
  display: inline;
   align-items: center;
   justify-content: center;
-  background: #0F1452;
+  background: #942222;
   color: white;
   border: none;
   padding: 10px 22px;
@@ -440,6 +440,16 @@ body.dark .skills li {
 }
 
 .btn-secondary:hover {
-  background: #4B53A6;
+  background: #661C1C;
   transform: translateY(-1px);
+}
+
+.contact footer {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 40px 20px;
 }
