@@ -454,6 +454,7 @@ body.dark .skills li {
    padding: 40px 20px;
 }
 /* Recommendation card base */
+
 #recommendation header > h2,
 #recommendation header > h3 {
   background: #ffffff;
@@ -461,11 +462,14 @@ body.dark .skills li {
   border-radius: 14px;
 
   padding: 20px 18px;
-  width: 260px;
+  width: 400px;
 
   display: flex;
   flex-basis: auto;
-  flex-flow: wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+  inline-size: auto;
   align-items: center;
 
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
