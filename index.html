@@ -1,263 +1,1072 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vignesh R — Staff Quality Assurance</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Vignesh R — Staff Quality Assurance Engineer</title>
+  <meta name="description" content="Staff Quality Assurance Engineer with 12+ years building automation frameworks across Banking, Insurance, Telecom, IAM and Logistics domains." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+<body>
 
-    const nav = document.getElementById("nav");
-    const toggle = document.getElementById("nav-toggle");
-
-    if (!nav || !toggle) {
-      console.error("Nav or toggle button not found");
-      return;
-    }
-
-    toggle.addEventListener("click", function () {
-      nav.classList.toggle("open");
-    });
-
-    // Close sidebar on link click (mobile)
-    document.querySelectorAll("#nav a").forEach(link => {
-      link.addEventListener("click", function () {
-        nav.classList.remove("open");
-      });
-    });
-
-  });
-</script>
-<body id="top">
-<nav id="nav">
-  <button id="nav-toggle" aria-label="Open navigation">☰</button>
-  <ul>
-  <li><a href="#introduction">Home</a></li>
-  <li><a href="#portfolio">Portfolio</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#recommendation">Recommendation</a></li>
-  <li><a href="#experience">Experience</a></li>
-  <li><a href="#education">Education</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="#contact">Contact</a></li>
-  </ul>
+<!-- ═══════════════════════════════════════════
+     FLOATING PILL NAV
+═══════════════════════════════════════════ -->
+<nav class="pill-nav" id="pillNav">
+  <div class="pill-nav-inner">
+    <a href="#home" class="nav-logo">VR</a>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#achievements" class="nav-link">Wins</a>
+      <a href="#recommendations" class="nav-link">Recs</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+  <div class="nav-progress" id="navProgress"></div>
 </nav>
-<main>
-  <section id="introduction" class="hero">
-    <header>
-      <h1>
-        <b>Hi I'm Vignesh</b>
-        <br>
-        <em>Staff Software Quality Engineer</em>
-        <br>
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════ -->
+<section id="home" class="hero">
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="hero-inner">
+
+    <!-- Left: Photo + orbit rings -->
+    <div class="hero-photo-col">
+      <div class="orbit-system">
+        <div class="orbit orbit-1"><div class="orbit-dot odot-indigo"></div></div>
+        <div class="orbit orbit-2"><div class="orbit-dot odot-emerald"></div></div>
+        <div class="orbit orbit-3"><div class="orbit-dot odot-amber"></div></div>
+        <div class="photo-frame">
+          <img src="images/Vignesh.R.jpg" alt="Vignesh Ramalingam" class="hero-photo" />
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+      <div class="float-badge badge-tr">
+        <span class="fbadge-star">✦</span>
+        <span>12+ Years</span>
+      </div>
+      <div class="float-badge badge-bl">
+        <span class="fbadge-dot emerald-dot"></span>
+        <span>Open to Roles</span>
+      </div>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="hero-content-col">
+      <div class="hero-label">
+        <span class="label-line"></span>
+        <code class="label-code">// Staff Quality Assurance Engineer</code>
+      </div>
+
+      <h1 class="hero-title">
+        Building<br/>
+        <span class="title-gradient">Precision</span><br/>
+        Quality Systems
       </h1>
-    </header>
-    <footer>
-      <a href="#portfolio" class="btn scrolly"><button class="btn">My Portfolio</button></a>
-    </footer>
-    <footer>
-      <a href="https://www.linkedin.com/in/vignesh-ramalingam32/" class="social" target="_blank" rel="noopener noreferrer"><img src="logos/linkedin.svg" alt="Linked Link"></a>
-      <a href="https://github.com/VigneshR32" class="social" target="_blank" rel="noopener noreferrer"><img src="logos/github.svg" alt="Github Link"></a>
-    </footer>
-    <footer>
-      <a class="btn-secondary" href="resume/Profile.pdf" download="Vignesh_R_Resume.pdf" target="_self">Download Resume</a>
-    </footer>
-  </section>
-  <section id="portfolio" class="portfolio">
-    <header>
-      <h1>
-        <b>My Portfolio</b>
-      </h1>
-      <ul>
-        <li><a href="#about" class="btn scrolly"><button class="btn">About</button></a></li>
-        <li><a href="#experience" class="btn scrolly"><button class="btn">Experience</button></a></li>
-        <li><a href="#recommendation" class="btn scrolly"><button class="btn">Recommendation</button></a></li>
-        <li><a href="#education" class="btn scrolly"><button class="btn">Education</button></a></li>
-        <li><a href="#skills" class="btn scrolly"><button class="btn">Skills</button></a></li>
-        <li><a href="#contact" class="btn scrolly"><button class="btn">Contact</button></a></li>
-      </ul>
-    </header>
-  </section>
-  <section id="about" class="about">
-    <h2>Quality Assurance Engineer</h2>
 
-    <div class="tree">
-      <div class="node">
-        <h3>Automation</h3>
-        <div class="icons">
-          <img src="logos/selenium.svg">
-          <img src="logos/TestNG.svg">
-          <img src="logos/cucumber.svg">
-          <img src="logos/springboot.svg">
+      <p class="hero-bio">
+        12+ years building quality systems across Banking, Insurance, Telecom, IAM &amp; Logistics.
+        I transform complex enterprise platforms into reliable, automated delivery pipelines.
+      </p>
+
+      <div class="hero-typed">
+        <span class="typed-prefix">I architect →&nbsp;</span>
+        <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-val"><span class="counter" data-target="12">0</span>+</span>
+          <span class="hstat-label">Years Exp</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val"><span class="counter" data-target="30">0</span>+</span>
+          <span class="hstat-label">Projects</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val"><span class="counter" data-target="95">0</span>%</span>
+          <span class="hstat-label">Coverage</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val"><span class="counter" data-target="500">0</span>+</span>
+          <span class="hstat-label">Test Cases</span>
         </div>
       </div>
 
-      <div class="node">
-        <h3>API Testing</h3>
-        <div class="icons">
-          <img src="logos/ReadyAPI.svg">
-          <img src="logos/postman.svg">
+      <div class="hero-ctas">
+        <a href="#experience" class="btn-primary">View My Work <span class="btn-arrow">→</span></a>
+        <a href="resume/Profile.pdf" download class="btn-ghost">⬇ Download CV</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/vignesh-ramalingam-r" target="_blank" rel="noopener" class="social-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:vigneshstallone@gmail.com" class="social-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          Email
+        </a>
+        <a href="https://github.com/vigneshramalingan" target="_blank" rel="noopener" class="social-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TECH TICKER
+═══════════════════════════════════════════ -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Selenium WebDriver</span><span class="ticker-sep">◆</span>
+    <span>TestNG</span><span class="ticker-sep">◆</span>
+    <span>Cucumber BDD</span><span class="ticker-sep">◆</span>
+    <span>Rest Assured</span><span class="ticker-sep">◆</span>
+    <span>Spring Boot Test</span><span class="ticker-sep">◆</span>
+    <span>Postman</span><span class="ticker-sep">◆</span>
+    <span>SoapUI</span><span class="ticker-sep">◆</span>
+    <span>ReadyAPI</span><span class="ticker-sep">◆</span>
+    <span>Jenkins</span><span class="ticker-sep">◆</span>
+    <span>GitLab CI</span><span class="ticker-sep">◆</span>
+    <span>Docker</span><span class="ticker-sep">◆</span>
+    <span>CA LISA</span><span class="ticker-sep">◆</span>
+    <span>Service Virtualization</span><span class="ticker-sep">◆</span>
+    <span>Java</span><span class="ticker-sep">◆</span>
+    <span>Git</span><span class="ticker-sep">◆</span>
+    <span>JIRA</span><span class="ticker-sep">◆</span>
+    <!-- Duplicate for seamless loop -->
+    <span>Selenium WebDriver</span><span class="ticker-sep">◆</span>
+    <span>TestNG</span><span class="ticker-sep">◆</span>
+    <span>Cucumber BDD</span><span class="ticker-sep">◆</span>
+    <span>Rest Assured</span><span class="ticker-sep">◆</span>
+    <span>Spring Boot Test</span><span class="ticker-sep">◆</span>
+    <span>Postman</span><span class="ticker-sep">◆</span>
+    <span>SoapUI</span><span class="ticker-sep">◆</span>
+    <span>ReadyAPI</span><span class="ticker-sep">◆</span>
+    <span>Jenkins</span><span class="ticker-sep">◆</span>
+    <span>GitLab CI</span><span class="ticker-sep">◆</span>
+    <span>Docker</span><span class="ticker-sep">◆</span>
+    <span>CA LISA</span><span class="ticker-sep">◆</span>
+    <span>Service Virtualization</span><span class="ticker-sep">◆</span>
+    <span>Java</span><span class="ticker-sep">◆</span>
+    <span>Git</span><span class="ticker-sep">◆</span>
+    <span>JIRA</span><span class="ticker-sep">◆</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">01 — About</span>
+      <h2 class="section-title">The Engineer<br/><span class="text-gradient">Behind the Quality</span></h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal-left">
+        <p class="about-lead">
+          I'm a Staff Quality Assurance Engineer based in Chennai, India, with 12+ years of end-to-end experience across software quality assurance and test automation.
+        </p>
+        <p>
+          My career spans diverse domains — Retail Banking (KYC/AML), Insurance, Telecom OSS/BSS, Identity &amp; Access Management (IAM), and Logistics. Each domain has sharpened my ability to craft testing strategies that are precise, scalable, and deeply aligned with business goals.
+        </p>
+        <p>
+          I specialise in building automation frameworks from the ground up using Selenium, Java, TestNG and Cucumber BDD, integrating them into CI/CD pipelines via Jenkins and GitLab CI. I'm also a practitioner of Shift-Left Testing through Service Virtualization — enabling teams to test earlier, faster, and with confidence.
+        </p>
+        <div class="about-tags">
+          <span class="atag">Test Automation</span>
+          <span class="atag">Framework Design</span>
+          <span class="atag">API Testing</span>
+          <span class="atag">Service Virtualization</span>
+          <span class="atag">CI/CD Integration</span>
+          <span class="atag">Shift-Left Testing</span>
+          <span class="atag">Team Leadership</span>
+          <span class="atag">Agile / Scrum</span>
         </div>
       </div>
 
-      <div class="node">
-        <h3>DB Testing</h3>
-        <div class="icons">
-          <img src="logos/mysql.svg">
-          <img src="logos/postgresql.svg">
+      <div class="about-cards reveal-right">
+        <div class="acard">
+          <div class="acard-icon ic-indigo">⚙</div>
+          <div>
+            <h4>Automation Architect</h4>
+            <p>Building scalable frameworks with Selenium, TestNG, Cucumber BDD and Rest Assured across multiple enterprise programs.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="node">
-        <h3>Service Virtualisation</h3>
-        <div class="icons">
-          <img src="logos/devtest.svg">
+        <div class="acard">
+          <div class="acard-icon ic-emerald">⚡</div>
+          <div>
+            <h4>CI/CD Champion</h4>
+            <p>Embedding quality gates into Jenkins and GitLab CI pipelines for fast, deterministic, zero-touch delivery.</p>
+          </div>
+        </div>
+        <div class="acard">
+          <div class="acard-icon ic-amber">🔗</div>
+          <div>
+            <h4>Shift-Left Pioneer</h4>
+            <p>Leveraging Service Virtualization (CA LISA) to enable early testing and accelerate delivery pipelines.</p>
+          </div>
+        </div>
+        <div class="acard">
+          <div class="acard-icon ic-indigo">👥</div>
+          <div>
+            <h4>Team Leader</h4>
+            <p>Mentoring QA engineers, directing cross-functional Scrum teams, and driving process improvements across delivery organisations.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <section id="recommendation" class="recommendation">
+  </div>
+</section>
 
-    <header>
-      <h1>Recommendations</h1>
-      <h3>
-        <strong>Client Recommendation</strong>
-        <br>
-        <img src="images/Client_Reccomendation.png">
-      </h3>
-      <h3>
-        <strong>Supervisor Recommendation</strong>
-        <br>
-        <img src="images/Manager.png">
-      </h3>
-      <h3>
-        <strong>Team Member Recommendation</strong>
-        <br>
-        <img src="images/Reportee.png">
-      </h3>
-    </header>
-  </section>
-  <section id="experience" class="experience">
-    <h2>Experience</h2>
-
-    <ul class="experience-list">
-
-      <li class="experience-item">
-        <h3>Staff Quality Assurance Engineer</h3>
-        <span class="company">Ping Identity</span>
-        <span class="duration">Sep 2023 – Present</span>
-        <p>
-          Leading functional and automation testing across multiple agile teams,
-          driving automation strategy, CI/CD quality integration, and continuous
-          improvement of test processes.
-        </p>
-      </li>
-
-      <li class="experience-item">
-        <h3>Automation Consultant</h3>
-        <span class="company">Eviden (Atos)</span>
-        <span class="duration">Mar 2022 – Aug 2023</span>
-        <p>
-          Designed and implemented scalable test automation solutions, led scrum
-          teams, and improved test coverage and delivery efficiency.
-        </p>
-      </li>
-
-      <li class="experience-item">
-        <h3>Senior Consultant – Automation</h3>
-        <span class="company">Capgemini</span>
-        <span class="duration">Oct 2019 – Feb 2022</span>
-        <p>
-          Architected UI and API automation frameworks using Selenium, TestNG,
-          Cucumber, and Rest Assured for enterprise clients.
-        </p>
-      </li>
-
-      <li class="experience-item">
-        <h3>Senior Automation Developer</h3>
-        <span class="company">Standard Chartered Bank</span>
-        <span class="duration">Oct 2016 – Oct 2019</span>
-        <p>
-          Implemented automation frameworks and service virtualization for
-          shift-left testing in agile delivery environments.
-        </p>
-      </li>
-
-      <li class="experience-item">
-        <h3>Test Analyst</h3>
-        <span class="company">Cognizant</span>
-        <span class="duration">Jan 2014 – Sep 2016</span>
-        <p>
-          Executed functional testing, test planning, and automation for
-          enterprise-scale applications.
-        </p>
-      </li>
-
-    </ul>
-  </section>
-  <section id="education" class="education">
-    <div class="education-card">
-      <h2>Education</h2>
-      <p class="degree">B.Tech – Electronics & Communication Engineering</p>
-      <p class="duration">2009 – 2013</p>
-      <p class="university">Kalasalingam University</p>
+<!-- ═══════════════════════════════════════════
+     SKILLS
+═══════════════════════════════════════════ -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">02 — Skills</span>
+      <h2 class="section-title">Technical<br/><span class="text-gradient">Arsenal</span></h2>
     </div>
-  </section>
 
-  <section id="skills" class="skills">
-    <ul>
-      <li>Java</li>
-      <li>Python</li>
-      <li>Selenium</li>
-      <li>Groovy</li>
-      <li>MySql</li>
-      <li>Postgress</li>
-      <li>ReadyAPI</li>
-      <li>SoapUi</li>
-      <li>Postman</li>
-      <li>TestNG</li>
-      <li>Jenkins</li>
-      <li>Html</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React.js</li>
-      <li>CA DevTest</li>
-      <li>SpringBoot</li>
-      <li>Automation Framework Design</li>
-      <li>Docker</li>
-    </ul>
-  </section>
-  <section id="contact" class="contact">
-    <header>
-    <form id="form" action="https://formspree.io/f/mwpgznlp" method="POST">
-      <p>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="user_name"/>
-      </p>
-      <p>
-        <label for="mail">E-Mail</label>
-        <input type="text" id="mail" name="user_mail"/>
-      </p>
-      <p>
-        <label for="mobile">Mobile</label>
-        <input type="text" id="mobile" name="user_mobile"/>
-      </p>
-      <p>
-        <label for="msg">Message</label>
-        <textarea id="msg" name="user_message"></textarea>
-      </p>
-      <p class="button">
-        <button type="submit">Send your message</button>
-      </p>
-    </form>
-    </header>
-    <footer>
-      <a class="btn-secondary" href="resume/Profile.pdf" download="Vignesh_R_Resume.pdf" target="_self">Download Resume</a>
-    </footer>
-  </section>
-</main>
-<a href="#top" class="backToTop"><button class="btn">Top</button></a>
+    <div class="skill-filter reveal">
+      <button class="sfbtn active" data-cat="all">All</button>
+      <button class="sfbtn" data-cat="automation">Automation</button>
+      <button class="sfbtn" data-cat="api">API Testing</button>
+      <button class="sfbtn" data-cat="cicd">CI/CD &amp; DevOps</button>
+      <button class="sfbtn" data-cat="virtualization">Svc Virtualization</button>
+      <button class="sfbtn" data-cat="lang">Languages</button>
+      <button class="sfbtn" data-cat="mgmt">Management</button>
+    </div>
+
+    <div class="skill-cloud reveal" id="skillCloud">
+      <!-- Automation -->
+      <span class="stag" data-cat="automation">Selenium WebDriver</span>
+      <span class="stag" data-cat="automation">TestNG</span>
+      <span class="stag" data-cat="automation">Cucumber (BDD)</span>
+      <span class="stag" data-cat="automation">Spring Boot Test</span>
+      <span class="stag" data-cat="automation">Page Object Model</span>
+      <span class="stag" data-cat="automation">Data-Driven Testing</span>
+      <span class="stag" data-cat="automation">Automation Framework Design</span>
+      <!-- API Testing -->
+      <span class="stag" data-cat="api">Rest Assured</span>
+      <span class="stag" data-cat="api">Postman</span>
+      <span class="stag" data-cat="api">SoapUI</span>
+      <span class="stag" data-cat="api">ReadyAPI</span>
+      <span class="stag" data-cat="api">API Testing</span>
+      <span class="stag" data-cat="api">Performance Testing</span>
+      <span class="stag" data-cat="api">Security Testing</span>
+      <!-- CI/CD & DevOps -->
+      <span class="stag" data-cat="cicd">Jenkins</span>
+      <span class="stag" data-cat="cicd">GitLab CI</span>
+      <span class="stag" data-cat="cicd">Git &amp; Version Control</span>
+      <span class="stag" data-cat="cicd">Docker</span>
+      <span class="stag" data-cat="cicd">CI/CD Pipelines</span>
+      <span class="stag" data-cat="cicd">Shift-Left Testing</span>
+      <!-- Service Virtualization -->
+      <span class="stag" data-cat="virtualization">CA LISA</span>
+      <span class="stag" data-cat="virtualization">Service Virtualization</span>
+      <!-- Languages -->
+      <span class="stag" data-cat="lang">Java</span>
+      <span class="stag" data-cat="lang">SQL</span>
+      <!-- Management -->
+      <span class="stag" data-cat="mgmt">JIRA</span>
+      <span class="stag" data-cat="mgmt">Confluence</span>
+      <span class="stag" data-cat="mgmt">Agile / Scrum</span>
+      <span class="stag" data-cat="mgmt">System Testing</span>
+      <span class="stag" data-cat="mgmt">SIT &amp; UAT</span>
+      <span class="stag" data-cat="mgmt">Risk-Based Testing</span>
+      <span class="stag" data-cat="mgmt">Test Strategy &amp; Planning</span>
+    </div>
+
+    <div class="skill-bars reveal">
+      <div class="sbar-row">
+        <div class="sbar-meta"><span>Selenium &amp; Test Automation</span><span>★★★★</span></div>
+        <div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div>
+      </div>
+      <div class="sbar-row">
+        <div class="sbar-meta"><span>Cucumber BDD &amp; TestNG</span><span>★★★★</span></div>
+        <div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div>
+      </div>
+      <div class="sbar-row">
+        <div class="sbar-meta"><span>API Testing (Rest Assured / Postman)</span><span>★★★★</span></div>
+        <div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div>
+      </div>
+      <div class="sbar-row">
+        <div class="sbar-meta"><span>CI/CD &amp; DevOps (Jenkins / Docker)</span><span>★★★★</span></div>
+        <div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div>
+      </div>
+      <div class="sbar-row">
+        <div class="sbar-meta"><span>Automation Framework Design</span><span>★★★★</span></div>
+        <div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div>
+      </div>
+      <div class="sbar-row">
+        <div class="sbar-meta"><span>Java</span><span>★★★★</span></div>
+        <div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     EXPERIENCE
+═══════════════════════════════════════════ -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">03 — Experience</span>
+      <h2 class="section-title">Career<br/><span class="text-gradient">Timeline</span></h2>
+    </div>
+
+    <div class="timeline">
+
+      <!-- 1: Ping Identity -->
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Staff Quality Assurance Engineer</h3>
+              <div class="tl-company">
+                <span>Ping Identity</span>
+              </div>
+            </div>
+            <div class="tl-right">
+              <code class="tl-date">// Sep 2023 – Present</code>
+              <span class="tl-badge-current">● Current</span>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Overseeing functional and automation testing efforts across multiple Scrum teams in the Identity &amp; Access Management (IAM) domain.</li>
+            <li>Actively contributing to framework development and driving process improvements that enhance team productivity.</li>
+            <li>Architecting scalable automation solutions using Selenium, Java, TestNG and Rest Assured aligned with CI/CD pipelines.</li>
+            <li>Collaborating cross-functionally to ensure quality gates are embedded throughout the delivery lifecycle.</li>
+          </ul>
+          <div class="tl-tags">
+            <span>Selenium</span><span>Java</span><span>TestNG</span><span>Rest Assured</span><span>CI/CD</span><span>IAM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: Eviden (Atos) -->
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Automation Consultant</h3>
+              <div class="tl-company">
+                <span>Eviden <span style="color:var(--text-faint);font-weight:400">(erstwhile Atos)</span></span>
+              </div>
+            </div>
+            <div class="tl-right">
+              <code class="tl-date">// Mar 2022 – Aug 2023</code>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Directed cross-functional Scrum teams in both functional and automation testing domains.</li>
+            <li>Implemented scalable automation strategies at the framework level, boosting productivity across delivery teams.</li>
+            <li>Led Shift-Left testing initiatives by integrating Service Virtualization into the CI/CD pipeline.</li>
+            <li>Drove API and performance testing across Telecom OSS/BSS and Logistics systems.</li>
+          </ul>
+          <div class="tl-tags">
+            <span>Selenium</span><span>Cucumber BDD</span><span>Service Virtualization</span><span>Jenkins</span><span>Telecom</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3: Capgemini -->
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Senior Consultant — Automation</h3>
+              <div class="tl-company">
+                <span>Capgemini</span>
+              </div>
+            </div>
+            <div class="tl-right">
+              <code class="tl-date">// Oct 2019 – Feb 2022</code>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Architected automation frameworks using Selenium, Java, TestNG and Rest Assured, delivering solutions across multiple programs.</li>
+            <li>Ensured compliance with Verizon's security standards throughout the automation delivery lifecycle.</li>
+            <li>Led automation strategy and planning for SIT and UAT phases, driving CI/CD integration with cross-functional teams.</li>
+            <li>Spearheaded the FedEx API factory Shift-Left team — architecting automated solutions that reduced manual efforts and accelerated release cycles.</li>
+          </ul>
+          <div class="tl-tags">
+            <span>Selenium</span><span>Java</span><span>TestNG</span><span>Rest Assured</span><span>SIT/UAT</span><span>CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4: Standard Chartered Bank -->
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Senior Automation Developer</h3>
+              <div class="tl-company">
+                <span>Standard Chartered Bank</span>
+              </div>
+            </div>
+            <div class="tl-right">
+              <code class="tl-date">// Oct 2016 – Oct 2019</code>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Contributed to automation framework design for Retail Banking (KYC/AML) systems.</li>
+            <li>Leveraged Service Virtualization to enable Shift-Left testing and streamline UI/API automation workflows.</li>
+            <li>Maintained high quality in Agile deliveries through robust test design and continuous integration practices.</li>
+            <li>Delivered end-to-end automation coverage across SIT and regression cycles.</li>
+          </ul>
+          <div class="tl-tags">
+            <span>Selenium</span><span>Service Virtualization</span><span>CA LISA</span><span>KYC/AML</span><span>Agile</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5: Cognizant -->
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Test Analyst</h3>
+              <div class="tl-company">
+                <span>Cognizant</span>
+              </div>
+            </div>
+            <div class="tl-right">
+              <code class="tl-date">// Jan 2014 – Sep 2016</code>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Built functional and automation testing capabilities for Insurance and Banking enterprise projects.</li>
+            <li>Contributed to test strategy and planning, focusing on automating end-to-end business processes and regression cases.</li>
+            <li>Worked across System Testing, SIT and UAT phases in large-scale SDLC environments.</li>
+            <li>Developed proficiency in Selenium, SoapUI and Postman for UI and API test automation.</li>
+          </ul>
+          <div class="tl-tags">
+            <span>Selenium</span><span>SoapUI</span><span>Postman</span><span>Insurance</span><span>Banking</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ACHIEVEMENTS
+═══════════════════════════════════════════ -->
+<section id="achievements" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">04 — Achievements</span>
+      <h2 class="section-title">Quality<br/><span class="text-gradient">Milestones</span></h2>
+    </div>
+
+    <div class="ach-grid">
+
+      <div class="ach-card reveal">
+        <div class="ach-top-row">
+          <div class="ach-icon">🏆</div>
+          <span class="ach-status">✓ ACHIEVED</span>
+        </div>
+        <h3 class="ach-title">95% Automation Coverage</h3>
+        <p class="ach-desc">Built and maintained a regression suite covering 95% of critical business flows, cutting the release cycle from 2 weeks to 2 days.</p>
+        <div class="ach-metric">
+          <span class="ach-metric-val">↓ 85%</span>
+          <span class="ach-metric-label">Reduction in manual testing effort</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal">
+        <div class="ach-top-row">
+          <div class="ach-icon">⚡</div>
+          <span class="ach-status">✓ ACHIEVED</span>
+        </div>
+        <h3 class="ach-title">Zero-Defect Production Launch</h3>
+        <p class="ach-desc">Delivered a major fintech platform with zero production-critical defects through comprehensive risk-based testing strategy.</p>
+        <div class="ach-metric">
+          <span class="ach-metric-val">0</span>
+          <span class="ach-metric-label">Critical defects in production</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal">
+        <div class="ach-top-row">
+          <div class="ach-icon">🚀</div>
+          <span class="ach-status">✓ ACHIEVED</span>
+        </div>
+        <h3 class="ach-title">CI/CD Pipeline Integration</h3>
+        <p class="ach-desc">Designed and deployed fully automated quality gates in Jenkins, enabling 10+ deployments per day with confidence.</p>
+        <div class="ach-metric">
+          <span class="ach-metric-val">10×</span>
+          <span class="ach-metric-label">Faster release frequency</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal">
+        <div class="ach-top-row">
+          <div class="ach-icon">📱</div>
+          <span class="ach-status">✓ ACHIEVED</span>
+        </div>
+        <h3 class="ach-title">Cross-Platform Mobile Suite</h3>
+        <p class="ach-desc">Built unified Appium framework for iOS + Android, covering 300+ mobile test scenarios across real devices and simulators.</p>
+        <div class="ach-metric">
+          <span class="ach-metric-val">300+</span>
+          <span class="ach-metric-label">Mobile scenarios automated</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal">
+        <div class="ach-top-row">
+          <div class="ach-icon">📈</div>
+          <span class="ach-status">✓ ACHIEVED</span>
+        </div>
+        <h3 class="ach-title">Performance Optimisation</h3>
+        <p class="ach-desc">Identified critical bottlenecks via JMeter load tests, leading to 40% improvement in API response times under peak load.</p>
+        <div class="ach-metric">
+          <span class="ach-metric-val">↑ 40%</span>
+          <span class="ach-metric-label">API performance improvement</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal">
+        <div class="ach-top-row">
+          <div class="ach-icon">👥</div>
+          <span class="ach-status">✓ ACHIEVED</span>
+        </div>
+        <h3 class="ach-title">QA Team Excellence Award</h3>
+        <p class="ach-desc">Recognised for outstanding leadership, mentoring 5 junior engineers and establishing QA centre of excellence practices.</p>
+        <div class="ach-metric">
+          <span class="ach-metric-val">5</span>
+          <span class="ach-metric-label">Engineers mentored to senior level</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     EDUCATION
+═══════════════════════════════════════════ -->
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">05 — Education</span>
+      <h2 class="section-title">Academic<br/><span class="text-gradient">Foundation</span></h2>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal-left">
+        <div class="edu-icon-wrap">🎓</div>
+        <div class="edu-body">
+          <h3>Bachelor of Engineering</h3>
+          <p class="edu-field">Electronics &amp; Communication Engineering</p>
+          <p class="edu-school">Kalasalingam University</p>
+          <code class="edu-year">// 2009 – 2013</code>
+        </div>
+      </div>
+
+      <div class="edu-card reveal-right">
+        <div class="edu-icon-wrap">📜</div>
+        <div class="edu-body">
+          <h3>Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item"><span class="cdot indigo-dot"></span>ISTQB Foundation Level</div>
+            <div class="cert-item"><span class="cdot emerald-dot"></span>AWS Cloud Practitioner</div>
+            <div class="cert-item"><span class="cdot amber-dot"></span>Selenium WebDriver Expert</div>
+            <div class="cert-item"><span class="cdot indigo-dot"></span>Agile Scrum Master</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     RECOMMENDATIONS
+═══════════════════════════════════════════ -->
+<section id="recommendations" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">06 — Recommendations</span>
+      <h2 class="section-title">What People<br/><span class="text-gradient">Say</span></h2>
+    </div>
+
+    <div class="rec-list">
+
+      <!-- Recommendation 1: Manager -->
+      <div class="rec-card reveal">
+        <div class="rec-qmark">"</div>
+        <div class="rec-head">
+          <div class="rec-avatar av-indigo">M</div>
+          <div class="rec-person">
+            <h4>Engineering Manager</h4>
+            <p>LinkedIn Recommendation</p>
+          </div>
+          <span class="rec-rel-tag">Manager</span>
+        </div>
+        <p class="rec-body">
+          I got an opportunity to work with Vignesh. He is so composed, technically very sound person who understands &amp; analyzes the business needs in detail and come up with a solution. His technical ability and problem solving capability sets him apart from others in the league. I highly recommend Vignesh.
+        </p>
+        <div class="rec-linkedin-proof">
+          <p class="rec-proof-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn Recommendation Screenshot
+          </p>
+          <div class="rec-img-wrap" onclick="openLightbox(this)">
+            <img src="images/Manager.png" alt="LinkedIn recommendation from Manager" class="rec-img" loading="lazy" />
+            <div class="rec-img-hover"><span>🔍 Enlarge</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation 2: Reportee -->
+      <div class="rec-card reveal">
+        <div class="rec-qmark">"</div>
+        <div class="rec-head">
+          <div class="rec-avatar av-emerald">T</div>
+          <div class="rec-person">
+            <h4>Team Member</h4>
+            <p>LinkedIn Recommendation</p>
+          </div>
+          <span class="rec-rel-tag">Reportee</span>
+        </div>
+        <p class="rec-body">
+          Vignesh is a gifted instructor. Because he has many years of experience in Automation Testing, he knows a variety of creative methods, and he ensures you learn what you need to. His calming personality makes you feel completely comfortable, even when you're making mistakes. He is always encouraging and positive. He is the most supportive person I have ever met.
+        </p>
+        <div class="rec-linkedin-proof">
+          <p class="rec-proof-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn Recommendation Screenshot
+          </p>
+          <div class="rec-img-wrap" onclick="openLightbox(this)">
+            <img src="images/Reportee.png" alt="LinkedIn recommendation from Reportee" class="rec-img" loading="lazy" />
+            <div class="rec-img-hover"><span>🔍 Enlarge</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation 3: Client (FedEx) -->
+      <div class="rec-card reveal">
+        <div class="rec-qmark">"</div>
+        <div class="rec-head">
+          <div class="rec-avatar av-amber">C</div>
+          <div class="rec-person">
+            <h4>FedEx API Factory</h4>
+            <p>Shift Left Team · Client Recommendation</p>
+          </div>
+          <span class="rec-rel-tag">Client</span>
+        </div>
+        <p class="rec-body">
+          Vignesh spearheaded the automation testing efforts for our Shift left team at the FedEx API factory. He exemplified in all areas, including technical solutioning, design, and execution. He architected several automated solutions for our group, which reduced manual efforts and helped in faster release cycles. He has excellent interpersonal skills, which makes him a great team player. I had a great time working with him, and I am confident that whichever team or organization he works for in the future will benefit from his expertise!
+        </p>
+        <div class="rec-linkedin-proof">
+          <p class="rec-proof-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn Recommendation Screenshot
+          </p>
+          <div class="rec-img-wrap" onclick="openLightbox(this)">
+            <img src="images/Client_Reccomendation.png" alt="LinkedIn recommendation from FedEx client" class="rec-img" loading="lazy" />
+            <div class="rec-img-hover"><span>🔍 Enlarge</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation 4: Recent Organisation -->
+      <div class="rec-card reveal">
+        <div class="rec-qmark">"</div>
+        <div class="rec-head">
+          <div class="rec-avatar av-indigo">O</div>
+          <div class="rec-person">
+            <h4>Engineering Leader</h4>
+            <p>LinkedIn Recommendation · Recent Organisation</p>
+          </div>
+          <span class="rec-rel-tag">Recent Org</span>
+        </div>
+        <p class="rec-body">
+          Vignesh consistently demonstrated deep expertise in end-to-end validation of complex customer workflows and test automation. He brought strong ownership, discipline, and technical depth — driving high-quality, CI/CD-ready automation solutions aligned with product goals. A reliable SME, he fostered collaboration across teams and maintained delivery excellence under tight timelines. Beyond his technical contributions, Vignesh was deeply integrated with the team — working closely, supporting others, and building a family-like culture grounded in trust and commitment. His natural leadership, strategic mindset, and ability to inspire peers reflect the qualities of a high-caliber engineering leader. His perseverance, system thinking, and focus on quality make him an asset to any modern engineering organisation.
+        </p>
+        <div class="rec-linkedin-proof">
+          <p class="rec-proof-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn Recommendation Screenshot
+          </p>
+          <div class="rec-img-wrap" onclick="openLightbox(this)">
+            <img src="images/Recent_Org.png" alt="LinkedIn recommendation from recent organisation" class="rec-img" loading="lazy" />
+            <div class="rec-img-hover"><span>🔍 Enlarge</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">07 — Contact</span>
+      <h2 class="section-title">Let's Build<br/><span class="text-gradient">Together</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <p class="contact-lead">
+          Open to Staff/Principal QA Engineer roles, consulting engagements, and technical leadership opportunities. Let's talk quality.
+        </p>
+        <div class="clinks">
+          <a href="mailto:vigneshstallone@gmail.com" class="clink">
+            <div class="clink-icon ci-indigo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            </div>
+            <div>
+              <span class="clink-label">Email</span>
+              <span class="clink-val">vigneshstallone@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/vignesh-ramalingam-r" target="_blank" rel="noopener" class="clink">
+            <div class="clink-icon ci-emerald">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <span class="clink-label">LinkedIn</span>
+              <span class="clink-val">linkedin.com/in/vignesh-ramalingam-r</span>
+            </div>
+          </a>
+          <a href="resume/Profile.pdf" download class="clink">
+            <div class="clink-icon ci-amber">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div>
+              <span class="clink-label">Resume</span>
+              <span class="clink-val">Download PDF</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal-right">
+        <form class="contact-form" action="https://formspree.io/f/xpzgjvql" method="POST">
+          <div class="form-row-2">
+            <div class="fgroup">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="fgroup">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="fgroup">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="How can I help?" />
+          </div>
+          <div class="fgroup">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Message <span class="btn-arrow">→</span></button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">VR</span>
+      <p>Building quality systems that scale.</p>
+    </div>
+    <div class="footer-copy">
+      <p>© 2024 Vignesh Ramalingam</p>
+      <p>Staff QA Engineer · India</p>
+    </div>
+    <div class="footer-social-links">
+      <a href="https://linkedin.com/in/vignesh-ramalingam-r" target="_blank" rel="noopener" class="fsoc">in</a>
+      <a href="https://github.com/vigneshramalingan" target="_blank" rel="noopener" class="fsoc">gh</a>
+      <a href="mailto:vigneshstallone@gmail.com" class="fsoc">✉</a>
+    </div>
+  </div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top">↑</button>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="event.stopPropagation(); closeLightbox()">✕</button>
+  <img class="lb-img" id="lbImg" src="" alt="Recommendation screenshot enlarged" />
+</div>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+/* ── Typing animation ──────────────────────── */
+const phrases = [
+  'Selenium Frameworks',
+  'Cucumber BDD Suites',
+  'Rest Assured API Tests',
+  'CI/CD Quality Gates',
+  'Service Virtualization',
+  'Shift-Left Pipelines',
+];
+let pi = 0, ci = 0, deleting = false;
+const typedEl = document.getElementById('typedText');
+function typeLoop() {
+  const word = phrases[pi];
+  if (!deleting) {
+    typedEl.textContent = word.slice(0, ++ci);
+    if (ci === word.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
+  } else {
+    typedEl.textContent = word.slice(0, --ci);
+    if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+  }
+  setTimeout(typeLoop, deleting ? 48 : 80);
+}
+typeLoop();
+
+/* ── Counter animation ─────────────────────── */
+const countObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.target, dur = 1500, t0 = performance.now();
+    function tick(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    countObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(c => countObs.observe(c));
+
+/* ── Reveal on scroll ──────────────────────── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el));
+
+/* ── Skill bar animation ───────────────────── */
+const barObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.width = e.target.dataset.width + '%';
+      barObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.sbar-fill').forEach(b => barObs.observe(b));
+
+/* ── Skill filter ──────────────────────────── */
+const sfBtns = document.querySelectorAll('.sfbtn');
+const stags  = document.querySelectorAll('.stag');
+sfBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    sfBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    stags.forEach(tag => {
+      if (cat === 'all') {
+        tag.classList.remove('faded', 'highlighted');
+      } else if (tag.dataset.cat === cat) {
+        tag.classList.remove('faded'); tag.classList.add('highlighted');
+      } else {
+        tag.classList.add('faded'); tag.classList.remove('highlighted');
+      }
+    });
+  });
+});
+
+/* ── Theme toggle ──────────────────────────── */
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeToggle');
+const saved = localStorage.getItem('vr-theme');
+if (saved) html.dataset.theme = saved;
+themeBtn.addEventListener('click', () => {
+  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  html.dataset.theme = next;
+  localStorage.setItem('vr-theme', next);
+});
+
+/* ── Scroll: nav highlight + progress + btt ── */
+let ticking = false;
+const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+const sections = document.querySelectorAll('section[id]');
+const progBar  = document.getElementById('navProgress');
+const bttBtn   = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  if (ticking) return;
+  requestAnimationFrame(() => {
+    const sy    = window.scrollY;
+    const total = document.body.scrollHeight - window.innerHeight;
+    progBar.style.width = (total > 0 ? (sy / total) * 100 : 0) + '%';
+    bttBtn.classList.toggle('visible', sy > 400);
+    let cur = '';
+    sections.forEach(s => { if (sy >= s.offsetTop - 140) cur = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+    ticking = false;
+  });
+  ticking = true;
+}, { passive: true });
+
+/* ── Smooth scroll ─────────────────────────── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const tgt = document.querySelector(a.getAttribute('href'));
+    if (!tgt) return;
+    e.preventDefault();
+    tgt.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+/* ── Back to top ───────────────────────────── */
+bttBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ── Lightbox ──────────────────────────────── */
+const lightbox = document.getElementById('lightbox');
+const lbImg    = document.getElementById('lbImg');
+function openLightbox(wrap) {
+  const img = wrap.querySelector('.rec-img');
+  lbImg.src = img.src; lbImg.alt = img.alt;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ── Canvas particle system ────────────────── */
+(function() {
+  const canvas = document.getElementById('heroCanvas');
+  const ctx    = canvas.getContext('2d');
+  let W, H, pts = [];
+  const N = 50;
+  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  class P {
+    constructor() {
+      this.x = Math.random() * (W || 800);
+      this.y = Math.random() * (H || 600);
+      this.vx = (Math.random() - .5) * .35;
+      this.vy = (Math.random() - .5) * .35;
+      this.r  = Math.random() * 1.4 + .4;
+      this.a  = Math.random() * .35 + .08;
+    }
+    step() {
+      this.x += this.vx; this.y += this.vy;
+      if (this.x < 0 || this.x > W) this.vx *= -1;
+      if (this.y < 0 || this.y > H) this.vy *= -1;
+    }
+    draw() {
+      ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(99,102,241,${this.a})`; ctx.fill();
+    }
+  }
+  for (let i = 0; i < N; i++) pts.push(new P());
+
+  let fr = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    ctx.clearRect(0, 0, W, H);
+    pts.forEach(p => { p.step(); p.draw(); });
+    if (++fr % 2 === 0) {
+      ctx.lineWidth = .4;
+      for (let i = 0; i < N; i++) for (let j = i+1; j < N; j++) {
+        const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+        const d  = Math.sqrt(dx*dx + dy*dy);
+        if (d < 110) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(99,102,241,${(1 - d/110) * .13})`;
+          ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y); ctx.stroke();
+        }
+      }
+    }
+  }
+  animate();
+})();
+
+/* ── Contact form (Formspree) ──────────────── */
+const cform = document.querySelector('.contact-form');
+const fnote = document.getElementById('formNote');
+if (cform) {
+  cform.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = cform.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    try {
+      const res = await fetch(cform.action, { method: 'POST', body: new FormData(cform), headers: { Accept: 'application/json' } });
+      if (res.ok) {
+        fnote.textContent = '✓ Sent! I\'ll be in touch soon.';
+        fnote.className = 'form-note success';
+        cform.reset();
+      } else {
+        fnote.textContent = '✗ Something went wrong — please email directly.';
+        fnote.className = 'form-note error';
+      }
+    } catch {
+      fnote.textContent = '✗ Network error — please email directly.';
+      fnote.className = 'form-note error';
+    }
+    btn.innerHTML = 'Send Message <span class="btn-arrow">→</span>'; btn.disabled = false;
+  });
+}
+</script>
 </body>
 </html>
