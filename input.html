@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Input Form</title>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7YW3H4E4V"></script>
@@ -14,7 +14,7 @@
     </script>
   </head>
   <body>
-    <form class="" action="index.html" method="post">
+    <form class="input-form" action="index.html" method="post" id="inputForm">
       <label for="">Name</label>
       <input type="text">
       <br />
@@ -25,7 +25,46 @@
       <input type="file" name="" value="">
       <br>
       <input type="range" name="" value="">
-      <input type="submit">
+      <input type="submit" value="Submit">
     </form>
+
+    <script>
+      // Track form field interactions
+      const inputForm = document.getElementById('inputForm');
+      const formInputs = inputForm.querySelectorAll('input, textarea');
+
+      formInputs.forEach(input => {
+        // Track field focus
+        input.addEventListener('focus', function() {
+          gtag('event', 'form_field_focus', {
+            'field_type': this.type,
+            'form_name': 'input_form'
+          });
+        });
+
+        // Track field change
+        input.addEventListener('change', function() {
+          gtag('event', 'form_field_change', {
+            'field_type': this.type,
+            'form_name': 'input_form'
+          });
+        });
+      });
+
+      // Track form submission
+      inputForm.addEventListener('submit', function(e) {
+        gtag('event', 'form_submit', {
+          'form_name': 'input_form',
+          'form_action': this.getAttribute('action'),
+          'timestamp': new Date().toISOString()
+        });
+      });
+
+      // Track page visit
+      gtag('event', 'page_view', {
+        'page_title': 'Input Form',
+        'page_location': window.location.href
+      });
+    </script>
   </body>
 </html>

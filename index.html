@@ -1076,6 +1076,165 @@ if (cform) {
     btn.innerHTML = 'Send Message <span class="btn-arrow">→</span>'; btn.disabled = false;
   });
 }
+
+/* ═══════════════════════════════════════════
+   GOOGLE ANALYTICS EVENT TRACKING
+═══════════════════════════════════════════ */
+(function() {
+  // Track Navigation Clicks
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const section = this.getAttribute('href')?.replace('#', '').toUpperCase();
+      gtag('event', 'navigation_click', {
+        'section': section,
+        'link_text': this.textContent.trim()
+      });
+    });
+  });
+
+  // Track Download CV Button
+  const downloadCvBtn = document.querySelector('a[download][href*="Profile.pdf"]');
+  if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', function() {
+      gtag('event', 'download_cv', {
+        'file_name': 'Profile.pdf',
+        'file_type': 'PDF'
+      });
+    });
+  }
+
+  // Track Social Media Clicks
+  const socialLinks = document.querySelectorAll('.social-chip');
+  socialLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      let platform = 'unknown';
+
+      if (href.includes('linkedin')) platform = 'LinkedIn';
+      else if (href.includes('github')) platform = 'GitHub';
+      else if (href.includes('mailto')) platform = 'Email';
+
+      gtag('event', 'social_click', {
+        'platform': platform,
+        'url': href
+      });
+    });
+  });
+
+  // Track Skill Filter Clicks
+  const skillFilters = document.querySelectorAll('.sfbtn');
+  skillFilters.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const category = this.getAttribute('data-cat');
+      gtag('event', 'skill_filter_click', {
+        'category': category,
+        'button_text': this.textContent.trim()
+      });
+    });
+  });
+
+  // Track Theme Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      gtag('event', 'theme_toggle', {
+        'theme': newTheme
+      });
+    });
+  }
+
+  // Track Back to Top Button
+  const bttBtn = document.getElementById('btt');
+  if (bttBtn) {
+    bttBtn.addEventListener('click', function() {
+      gtag('event', 'back_to_top_click', {
+        'timestamp': new Date().toISOString()
+      });
+    });
+  }
+
+  // Track Contact Form Submission
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    const originalSubmitHandler = contactForm.onsubmit;
+
+    contactForm.addEventListener('submit', function(e) {
+      // Get form values (without storing sensitive data)
+      const formData = new FormData(this);
+      const messageLength = formData.get('message') ? formData.get('message').length : 0;
+
+      gtag('event', 'contact_form_submit', {
+        'form_name': 'contact_form',
+        'message_length': messageLength,
+        'timestamp': new Date().toISOString()
+      });
+    });
+  }
+
+  // Track View My Work Button
+  const viewWorkBtn = document.querySelector('a[href="#experience"][class*="btn-primary"]');
+  if (viewWorkBtn) {
+    viewWorkBtn.addEventListener('click', function() {
+      gtag('event', 'view_work_click', {
+        'button_text': this.textContent.trim(),
+        'target_section': 'experience'
+      });
+    });
+  }
+
+  // Track Page Scroll Depth
+  let scrollTracked25 = false, scrollTracked50 = false, scrollTracked75 = false, scrollTracked100 = false;
+
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    if (scrollPercent >= 25 && !scrollTracked25) {
+      gtag('event', 'scroll_depth', { 'depth_percent': 25 });
+      scrollTracked25 = true;
+    }
+    if (scrollPercent >= 50 && !scrollTracked50) {
+      gtag('event', 'scroll_depth', { 'depth_percent': 50 });
+      scrollTracked50 = true;
+    }
+    if (scrollPercent >= 75 && !scrollTracked75) {
+      gtag('event', 'scroll_depth', { 'depth_percent': 75 });
+      scrollTracked75 = true;
+    }
+    if (scrollPercent >= 100 && !scrollTracked100) {
+      gtag('event', 'scroll_depth', { 'depth_percent': 100 });
+      scrollTracked100 = true;
+    }
+  });
+
+  // Track Page Visibility (when user leaves/returns to tab)
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      gtag('event', 'page_hidden', {
+        'timestamp': new Date().toISOString()
+      });
+    } else {
+      gtag('event', 'page_visible', {
+        'timestamp': new Date().toISOString()
+      });
+    }
+  });
+
+  // Track Time on Page (every 30 seconds)
+  let timeOnPage = 0;
+  setInterval(function() {
+    timeOnPage += 30;
+    if (timeOnPage % 300 === 0) { // Track every 5 minutes
+      gtag('event', 'time_on_page', {
+        'seconds': timeOnPage
+      });
+    }
+  }, 30000);
+})();
 </script>
 </body>
 </html>
