@@ -126,7 +126,15 @@
 
       <div class="hero-ctas">
         <a href="#experience" class="btn-primary">View My Work <span class="btn-arrow">→</span></a>
-        <a href="resume/Profile.pdf" download class="btn-ghost">⬇ Download CV</a>
+        <a href="resume/Profile.pdf"
+   download
+   class="btn-ghost"
+   onclick="gtag('event', 'cv_download', {
+     file_name: 'Profile.pdf',
+     file_path: this.href
+   });">
+   ⬇ Download CV
+</a>
       </div>
 
       <div class="hero-socials">
