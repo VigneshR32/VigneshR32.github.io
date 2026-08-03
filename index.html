@@ -129,10 +129,14 @@
         <a href="resume/Profile.pdf"
    download
    class="btn-ghost"
-   onclick="gtag('event', 'cv_download', {
-     file_name: 'Profile.pdf',
-     file_path: this.href
-   });">
+   onclick="event.preventDefault();
+            gtag('event', 'cv_download', {
+              file_name: 'Profile.pdf',
+              event_callback: () => {
+                window.location = this.href;
+              }
+            });
+            return false;">
    ⬇ Download CV
 </a>
       </div>
